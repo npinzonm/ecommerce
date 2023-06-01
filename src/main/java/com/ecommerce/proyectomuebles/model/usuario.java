@@ -1,40 +1,72 @@
 package com.ecommerce.proyectomuebles.model;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "usuarios")
 public class usuario {
 
     // Variable declaration
-
-    private Integer numeroIdentificacion;
-    private String tipoIdentificacion;
+    @Id
+    private Integer numero_identificacion;
+    private String tipo_identificacion;
     private String nombre;
-    private String apellidp;
+    private String apellido;
     private String pais;
     private String ciudad;
     private String departamento;
     private String localidad;
-    private String direccionP;
-    private String direccionSe;
+    private String direccion_principal;
+    private String dirección_secundaria;
     private Integer telefono;
-    private String correoElectronico;
+    private String correo_electronico;
     private String contrasena;
     private String rol;
 
 
-    // Getter
-    public Integer getNumeroIdentificacion() {
-        return numeroIdentificacion;
+    public usuario(){
+
     }
 
-    public String getTipoIdentificacion() {
-        return tipoIdentificacion;
+    @Override
+    public String toString() {
+        return "usuario{" +
+                "numero_identificacion=" + numero_identificacion +
+                ", tipo_identificacion='" + tipo_identificacion + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", pais='" + pais + '\'' +
+                ", ciudad='" + ciudad + '\'' +
+                ", departamento='" + departamento + '\'' +
+                ", localidad='" + localidad + '\'' +
+                ", direccion_principal='" + direccion_principal + '\'' +
+                ", dirección_secundaria='" + dirección_secundaria + '\'' +
+                ", telefono=" + telefono +
+                ", correo_electronico='" + correo_electronico + '\'' +
+                ", contrasena='" + contrasena + '\'' +
+                ", rol='" + rol + '\'' +
+                '}';
+    }
+
+    // Getter
+
+    public Integer getNumero_identificacion() {
+        return numero_identificacion;
+    }
+
+    public String getTipo_identificacion() {
+        return tipo_identificacion;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getApellidp() {
-        return apellidp;
+    public String getapellido() {
+        return apellido;
     }
 
     public String getPais() {
@@ -53,20 +85,20 @@ public class usuario {
         return localidad;
     }
 
-    public String getDireccionP() {
-        return direccionP;
+    public String getDireccion_principal() {
+        return direccion_principal;
     }
 
-    public String getDireccionSe() {
-        return direccionSe;
+    public String getDirección_secundaria() {
+        return dirección_secundaria;
     }
 
     public Integer getTelefono() {
         return telefono;
     }
 
-    public String getCorreoElectronico() {
-        return correoElectronico;
+    public String getCorreo_electronico() {
+        return correo_electronico;
     }
 
     public String getContrasena() {
@@ -77,23 +109,23 @@ public class usuario {
         return rol;
     }
 
+
     // Setter
 
-
-    public void setNumeroIdentificacion(Integer numeroIdentificacion) {
-        this.numeroIdentificacion = numeroIdentificacion;
+    public void setNumero_identificacion(Integer numero_identificacion) {
+        this.numero_identificacion = numero_identificacion;
     }
 
-    public void setTipoIdentificacion(String tipoIdentificacion) {
-        this.tipoIdentificacion = tipoIdentificacion;
+    public void setTipo_identificacion(String tipo_identificacion) {
+        this.tipo_identificacion = tipo_identificacion;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setApellidp(String apellidp) {
-        this.apellidp = apellidp;
+    public void setapellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public void setPais(String pais) {
@@ -112,20 +144,20 @@ public class usuario {
         this.localidad = localidad;
     }
 
-    public void setDireccionP(String direccionP) {
-        this.direccionP = direccionP;
+    public void setDireccion_principal(String direccion_principal) {
+        this.direccion_principal = direccion_principal;
     }
 
-    public void setDireccionSe(String direccionSe) {
-        this.direccionSe = direccionSe;
+    public void setDirección_secundaria(String dirección_secundaria) {
+        this.dirección_secundaria = dirección_secundaria;
     }
 
     public void setTelefono(Integer telefono) {
         this.telefono = telefono;
     }
 
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
+    public void setCorreo_electronico(String correo_electronico) {
+        this.correo_electronico = correo_electronico;
     }
 
     public void setContrasena(String contrasena) {
@@ -136,46 +168,24 @@ public class usuario {
         this.rol = rol;
     }
 
+
     // CONSTRUCTOR
 
-    public usuario(Integer numeroIdentificacion, String tipoIdentificacion, String nombre, String apellidp, String pais, String ciudad, String departamento, String localidad, String direccionP, String direccionSe, Integer telefono, String correoElectronico, String contrasena, String rol) {
-        this.numeroIdentificacion = numeroIdentificacion;
-        this.tipoIdentificacion = tipoIdentificacion;
+
+    public usuario(Integer numero_identificacion, String tipo_identificacion, String nombre, String apellido, String pais, String ciudad, String departamento, String localidad, String direccion_principal, String dirección_secundaria, Integer telefono, String correo_electronico, String contrasena, String rol) {
+        this.numero_identificacion = numero_identificacion;
+        this.tipo_identificacion = tipo_identificacion;
         this.nombre = nombre;
-        this.apellidp = apellidp;
+        this.apellido = apellido;
         this.pais = pais;
         this.ciudad = ciudad;
         this.departamento = departamento;
         this.localidad = localidad;
-        this.direccionP = direccionP;
-        this.direccionSe = direccionSe;
+        this.direccion_principal = direccion_principal;
+        this.dirección_secundaria = dirección_secundaria;
         this.telefono = telefono;
-        this.correoElectronico = correoElectronico;
+        this.correo_electronico = correo_electronico;
         this.contrasena = contrasena;
         this.rol = rol;
-    }
-
-    public usuario(){
-
-    }
-
-    @Override
-    public String toString() {
-        return "usuario{" +
-                "numeroIdentificacion=" + numeroIdentificacion +
-                ", tipoIdentificacion='" + tipoIdentificacion + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", apellidp='" + apellidp + '\'' +
-                ", pais='" + pais + '\'' +
-                ", ciudad='" + ciudad + '\'' +
-                ", departamento='" + departamento + '\'' +
-                ", localidad='" + localidad + '\'' +
-                ", direccionP='" + direccionP + '\'' +
-                ", direccionSe='" + direccionSe + '\'' +
-                ", telefono=" + telefono +
-                ", correoElectronico='" + correoElectronico + '\'' +
-                ", contrasena='" + contrasena + '\'' +
-                ", rol='" + rol + '\'' +
-                '}';
     }
 }

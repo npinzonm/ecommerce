@@ -12,10 +12,14 @@ header nav {
 }
 
 header nav img {
-    max-width: 80%;
     height: auto;
 }
 
 nav a h1 {
     display: none;
+}
+
+nav #logo {
+    width: 25%;
+    max-width: 30%;
 }
